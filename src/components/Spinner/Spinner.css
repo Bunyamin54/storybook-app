@@ -16,10 +16,10 @@
 }
 
 .spinner {
-  border: 8px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;  /* Tam yuvarlak yapar */
-  border-left-color: #3069FE;  /* Spinner'ın rengini ayarlar */
-  animation: spin 1s infinite linear;  /* Sonsuz dönen animasyon */
+  border: 8px solid rgba(0, 0, 0, 0.0);
+  border-radius: 50%;  /* Makes it fully round */
+  border-left-color: #3069FE;  /* Sets the color of the spinner */
+  animation: spin 1s infinite linear;  /* Infinite spinning animation */
 }
 
 .small { width: 32px; height: 32px; }  /* Küçük boyut */
