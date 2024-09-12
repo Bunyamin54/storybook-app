@@ -1,3 +1,4 @@
+/* Varsayılan stiller */
 .container {
   display: flex;
   justify-content: space-between;  /* Spinner'lar arasında boşluk */
@@ -15,23 +16,42 @@
 }
 
 .spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
+  border: 8px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;  /* Tam yuvarlak yapar */
   border-left-color: #3069FE;  /* Spinner'ın rengini ayarlar */
   animation: spin 1s infinite linear;  /* Sonsuz dönen animasyon */
 }
 
-.small { width: 20px; height: 20px; }  /* Küçük boyut */
-.medium { width: 30px; height: 30px; }  /* Orta boyut */
-.large { width: 40px; height: 40px; }  /* Büyük boyut */
-.extra-large { width: 50px; height: 50px; }  /* En büyük boyut */
+.small { width: 32px; height: 32px; }  /* Küçük boyut */
+.medium { width: 48px; height: 48px; }  /* Orta boyut */
+.large { width: 56px; height: 56px; }  /* Büyük boyut */
+.extra-large { width: 64px; height: 64px; }  /* En büyük boyut */
 
 .text {
   margin-top: 8px;  /* Spinner ile Loading yazısı arasındaki boşluk */
-  color: #3069FE;  /* Loading yazısı rengi */
+  color: #344054;  /* Loading yazısı rengi */
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Mobil cihazlar için özel düzenleme */
+@media (max-width: 600px) {
+  .container {
+    justify-content: space-between;  /* Spinner'ları merkezde hizalar */
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .spinner-container {
+    margin: 5px;  /* Spinner'lar arasındaki boşluğu küçültür */
+  }
+
+.small { width: 32px; height: 32px; }  /* Küçük boyut */
+.medium { width: 48px; height: 48px; }  /* Orta boyut */
+.large { width: 56px; height: 56px; }  /* Büyük boyut */
+.extra-large { width: 64px; height: 64px; }  /* En büyük boyut */
 }
