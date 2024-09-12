@@ -11,15 +11,16 @@
 .spinner-container {
   display: flex;
   flex-direction: column;  /* Spinner ve Loading yazısını dikey sıralar */
+  justify-content: center;
   align-items: center;
   margin: 10px;  /* Spinner'lar arasında boşluk sağlar */
 }
 
 .spinner {
-  border: 8px solid rgba(0, 0, 0, 0.0);
-  border-radius: 50%;  /* Makes it fully round */
-  border-left-color: #3069FE;  /* Sets the color of the spinner */
-  animation: spin 1s infinite linear;  /* Infinite spinning animation */
+  border: 8px solid rgba(0, 0, 0, 0.0);  /* Spinner kenarları şeffaf */
+  border-radius: 50%;  /* Tam yuvarlak yapar */
+  border-left-color: #3069FE;  /* Spinner'ın rengini ayarlar */
+  animation: spin 1s infinite linear;  /* Sonsuz dönen animasyon */
 }
 
 .small { width: 32px; height: 32px; }  /* Küçük boyut */
@@ -30,6 +31,23 @@
 .text {
   margin-top: 8px;  /* Spinner ile Loading yazısı arasındaki boşluk */
   color: #344054;  /* Loading yazısı rengi */
+  text-align: center; /* Yazıyı ortalar */
+}
+
+.text.small {
+  font-size: 14px;  /* Küçük boyutlar için yazı boyutu */
+}
+
+.text.medium {
+  font-size: 14px;  /* Orta boyutlar için yazı boyutu */
+}
+
+.text.large {
+  font-size: 18px;  /* Büyük boyutlar için yazı boyutu */
+}
+
+.text.extra-large {
+  font-size: 18px;  /* En büyük boyutlar için yazı boyutu */
 }
 
 @keyframes spin {
@@ -41,7 +59,6 @@
 @media (max-width: 600px) {
   .container {
     justify-content: space-between;  /* Spinner'ları merkezde hizalar */
-
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -50,8 +67,8 @@
     margin: 5px;  /* Spinner'lar arasındaki boşluğu küçültür */
   }
 
-.small { width: 32px; height: 32px; }  /* Küçük boyut */
-.medium { width: 48px; height: 48px; }  /* Orta boyut */
-.large { width: 56px; height: 56px; }  /* Büyük boyut */
-.extra-large { width: 64px; height: 64px; }  /* En büyük boyut */
+  .small { width: 32px; height: 32px; }
+  .medium { width: 48px; height: 48px; }
+  .large { width: 56px; height: 56px; }
+  .extra-large { width: 64px; height: 64px; }
 }

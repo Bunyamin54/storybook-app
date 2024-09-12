@@ -6,19 +6,19 @@ const SpinnersContainer = () => (
   <div className="container">
     <div className="spinner-container">
       <Spinner size="small" />
-      <div className="text">Loading...</div>
+      <div className="text small">Loading...</div>
     </div>
     <div className="spinner-container">
       <Spinner size="medium" />
-      <div className="text">Loading...</div>
+      <div className="text medium">Loading...</div>
     </div>
     <div className="spinner-container">
       <Spinner size="large" />
-      <div className="text">Loading...</div>
+      <div className="text large">Loading...</div>
     </div>
     <div className="spinner-container">
       <Spinner size="extra-large" />
-      <div className="text">Loading...</div>
+      <div className="text extra-large">Loading...</div>
     </div>
   </div>
 );
